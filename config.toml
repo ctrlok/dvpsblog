@@ -1,0 +1,47 @@
+# The URL the site will be built for
+base_url = "https://dvps.blog"
+compile_sass = true
+build_search_index = true
+theme = "apollo"
+generate_feeds = true
+taxonomies = [{ name = "tags" }]
+
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "css"
+#highlight_themes_css = [
+#    { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+#    { theme = "ayu-light", filename = "syntax-theme-light.css" },
+#]
+extra_syntaxes_and_themes = ["syntaxes/Terraform.tmLanguage", "syntaxes/"]
+
+[extra]
+# Put all your custom variables here
+fancy_code = true
+dynamic_note = true
+toc = false
+use_cdn = false
+favicon = "/icon/favicon.png"    # Path to the favicon
+theme = "auto"
+copyright = "Vsevolod Poliakov, 2024; All rights reserved"
+
+github_repository = "ctrlok/dvpsblog"
+
+menu = [
+    { name = "/posts", url = "/posts/", weight = 1 },
+    { name = "/about", url = "/about/", weight = 2 },
+    { name = "/rss", url = "/atom.xml", weight = 3 },
+]
+
+repo_url = "https://github.com/ctrlok/dvpsblog/tree/main/content/"
+
+analytics = { enabled = true, umami = { website_id = "27781819-1cc7-4e67-96af-8ed962267609" } }
+
+custom_css = []
+
+stylesheets = [
+    "override.css",
+]

@@ -1,0 +1,8 @@
+<div class="foldable">
+    <div class="foldable-header" onclick="this.parentNode.classList.toggle('active')">
+        {{ title }}
+        <span class="foldable-arrow">&#9662;</span>
+    </div>
+    <div class="foldable-content">{{ body | markdown | safe}}</div>
+</div>
+

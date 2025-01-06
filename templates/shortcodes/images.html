@@ -1,0 +1,7 @@
+{% if position == "left"%}
+    <img src="{{path}}" style="float:left;margin:5px 5px 25px 0px;width:{{width}}px;margin-right:{{margin}}px;" />
+{% endif %}
+
+{% if position == "right"%}
+    <img src="{{path}}" style="float:right;margin:5px 5px 0 25px;width:{{width}}px;margin-left:{{margin}}px;" />
+{% endif %}

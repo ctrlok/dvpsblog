@@ -1,0 +1,216 @@
+/*
+ * theme "ayu-dark-updated" generated from light theme
+ */
+
+.z-code {
+ color: #d1d5da;
+ background-color: #1f2328;
+}
+
+.z-comment, .z-punctuation.z-definition.z-comment {
+ color: #5b6369;
+ font-style: italic;
+}
+
+.z-variable {
+ color: #d1d5da;
+}
+
+.z-string, .z-constant.z-other.z-symbol {
+ color: #6dc2ff;
+}
+
+.z-constant.z-numeric {
+ color: #ff8ad8;
+}
+
+.z-string.z-regexp, .z-constant.z-character.z-escape {
+ color: #6dc2ff;
+}
+
+.z-constant.z-language {
+ color: #ff8ad8;
+}
+
+.z-constant.z-character, .z-constant.z-other {
+ color: #ff8ad8;
+}
+
+.z-variable.z-member {
+ color: #d48ee5;
+}
+
+.z-keyword, .z-keyword.z-operator.z-word {
+ color: #d48ee5;
+}
+
+.z-keyword.z-operator {
+ color: #68d9ef;
+}
+
+.z-punctuation.z-separator, .z-punctuation.z-terminator {
+ color: #d1d5da;
+}
+
+.z-punctuation.z-section {
+ color: #d1d5da;
+}
+
+.z-punctuation.z-accessor {
+ color: #68d9ef;
+}
+
+.z-punctuation.z-definition.z-annotation {
+ color: #d1d5da;
+}
+
+.z-variable.z-other.z-dollar.z-only.z-js, .z-variable.z-other.z-object.z-dollar.z-only.z-js, .z-variable.z-type.z-dollar.z-only.z-js, .z-support.z-class.z-dollar.z-only.z-js {
+ color: #d48ee5;
+}
+
+.z-storage {
+ color: #d48ee5;
+}
+
+.z-storage.z-type {
+ color: #d48ee5;
+}
+
+.z-entity.z-name.z-function {
+ color: #d48ee5;
+}
+
+.z-entity.z-name, .z-entity.z-name.z-tag, .z-entity.z-name.z-label {
+ color: #64b5ff;
+}
+
+.z-entity.z-other.z-inherited-class {
+ color: #64b5ff;
+ text-decoration: underline;
+}
+
+.z-variable.z-parameter {
+ color: #ff8ad8;
+}
+
+.z-variable.z-language {
+ color: #6fd2f0;
+ font-style: italic;
+}
+
+.z-entity.z-name.z-tag, .z-meta.z-tag.z-sgml {
+ color: #6fd2f0;
+}
+
+.z-punctuation.z-definition.z-tag.z-end, .z-punctuation.z-definition.z-tag.z-begin, .z-punctuation.z-definition.z-tag {
+ color: #6fd2f0;
+}
+
+.z-entity.z-other.z-attribute-name {
+ color: #d48ee5;
+}
+
+.z-variable.z-function, .z-variable.z-annotation {
+ color: #d48ee5;
+}
+
+.z-support.z-function, .z-support.z-macro {
+ color: #a998ff;
+}
+
+.z-support.z-constant {
+ color: #68d9ef;
+ font-style: italic;
+}
+
+.z-support.z-type, .z-support.z-class {
+ color: #6fd2f0;
+ font-style: italic;
+}
+
+.z-invalid {
+ color: #ff4b4b;
+}
+
+.z-invalid.z-deprecated {
+ color: #ffffff;
+ background-color: #d48ee5;
+}
+
+.z-meta.z-diff, .z-meta.z-diff.z-header {
+ color: #c594c5;
+}
+
+.z-source.z-ruby .z-variable.z-other.z-readwrite {
+ color: #d48ee5;
+}
+
+.z-source.z-css .z-entity.z-name.z-tag, .z-source.z-sass .z-entity.z-name.z-tag, .z-source.z-scss .z-entity.z-name.z-tag, .z-source.z-less .z-entity.z-name.z-tag, .z-source.z-stylus .z-entity.z-name.z-tag {
+ color: #64b5ff;
+}
+
+.z-source.z-css .z-support.z-type, .z-source.z-sass .z-support.z-type, .z-source.z-scss .z-support.z-type, .z-source.z-less .z-support.z-type, .z-source.z-stylus .z-support.z-type {
+ color: #5b6369;
+}
+
+.z-support.z-type.z-property-name {
+ color: #6fd2f0;
+}
+
+.z-constant.z-numeric.z-line-number.z-find-in-files {
+ color: #5b6369;
+}
+
+.z-constant.z-numeric.z-line-number.z-match {
+ color: #d48ee5;
+}
+
+.z-entity.z-name.z-filename.z-find-in-files {
+ color: #6dc2ff;
+}
+
+.z-message.z-error {
+ color: #ff4b4b;
+}
+
+.z-markup.z-heading {
+ color: #d48ee5;
+ font-weight: bold;
+}
+
+.z-string.z-other.z-link, .z-markup.z-underline.z-link {
+ color: #6dc2ff;
+ text-decoration: underline;
+ font-style: italic;
+}
+
+.z-punctuation.z-definition.z-image {
+ color: #d48ee5;
+}
+
+.z-markup.z-italic {
+ color: #a998ff;
+ font-style: italic;
+}
+
+.z-markup.z-bold {
+ color: #a998ff;
+ font-weight: bold;
+}
+
+.z-markup.z-quote {
+ color: #ff8ad8;
+ font-style: italic;
+}
+
+.z-markup.z-inserted {
+ color: #6dc2ff;
+}
+
+.z-markup.z-changed {
+ color: #6fd2f0;
+}
+
+.z-markup.z-deleted {
+ color: #a998ff;
+}

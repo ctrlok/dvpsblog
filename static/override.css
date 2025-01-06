@@ -1,0 +1,393 @@
+@import url("syntax-theme-light.css") (prefers-color-scheme: light);
+@import url("syntax-theme-dark.css") (prefers-color-scheme: dark);
+
+:root {
+    /*--primary-color: #f876de !important;*/
+    /*--secondary-color: #7ee8fa;*/
+    --primary-color: #ff63ca !important;
+    --secondary-color: #49a1f5;
+    --border-color: #161616;
+    --text-font: 'iA Writer Quattro S';
+    /*--text-font: 'Helvetica';*/
+    --header-font: 'Space Grotesk';
+    --code-font: 'Jetbrains Mono';
+    --text-black: #212121FF;
+    --gradient: linear-gradient(to right, #ff63ca, #009FFF, #12cfe3, #0a87d3);
+    --grad-color-1: #dd72cb;
+    --grad-color-2: #49a1f5;
+    --grad-color-3: #5fbdea;
+    --grad-color-4: #5ec8df;
+    --grad-color-5: #8d88e2;
+    --grad-color-6: #e3e3f9;
+}
+
+@media (max-width: 768px) {
+    .note-content p,
+    .note-content blockquote,
+    .note-content table,
+    .note-content pre,
+    .note-content ol,
+    .note-content ul {
+        margin-left: 10px !important; /* Adjust as needed */
+    }
+    .note-toggle .note-icon,
+    .note-header .note-icon,
+    p, .meta, pre, table, foldable, footer, .list, details,
+    ul,
+    ol,
+    .content,
+    .page-header,
+    blockquote,
+    blockquote h1, h2, h3 {
+        margin-left: 2px !important; /* Adjust as needed */
+        padding-left: 5px; /* Adjust as needed */
+    }
+    .note-container {
+        margin-left: 2px !important;
+    }
+    ol {
+        padding-inline-start: 20px;
+    }
+    h1 {
+        font-size: 2rem !important;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 0px !important;
+    }
+    .page-header {
+        font-size: 2rem !important;
+    }
+    img {
+        float: none;
+        max-width: 100%;
+        min-width: 100%;
+        padding-bottom: 10px;
+    }
+    .content {
+        padding-left: 10px !important;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+    }
+    body {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+        margin-left: 3px !important;
+    }
+    header {
+        align-items: flex-end;
+    }
+    blockquote p {
+        margin-left: 13px !important;
+    }
+}
+
+.page-header {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    font-family: var(--header-font);
+    margin: 0rem 0px 4px 0px;
+}
+
+pre:is(.mermaid) {
+    background-color: #161616 !important;
+    border-color: var(--bg-1);
+}
+
+pre:not(.mermaid) {
+    font-family: var(--code-font);
+    border-color: var(--bg-2);
+    background-color: var(--bg-0) !important;
+    white-space: pre-wrap; /* Enables text wrapping */
+    word-wrap: break-word; /* Ensures long words or strings break properly */
+    word-break: break-word; /* Handles very long strings without spaces */
+}
+
+.dots {
+    color: grey;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    display: inline;
+}
+
+.clipboard-button, .clipboard-button svg {
+    fill: var(--primary-color);
+}
+
+.foldable {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+code {
+    border-width: 0.08rem;
+    border-color: var(--secondary-color);
+    background-color: var(--background-color);
+    /*background-color: var(--secondary-color);*/
+}
+
+.code-label {
+    opacity: 0.5;
+    background-color: var(--primary-color);
+    margin-top: -.1rem;
+    border-radius: 0 0 0rem .25rem;
+}
+
+.note-toggle .note-icon, .note-toggle .note-icon, .note-header .note-icon, .note-header .note-icon {
+    padding-left: 14px;
+}
+
+.note-container {
+    margin-left: 36px;
+}
+.note-header {
+    color: var(--text-color) !important;
+    background: var(--background-color); /* fallback for old browsers */
+    padding-left: 0px !important;
+    /*background: -webkit-linear-gradient(to right, var(--primary-color), var(--secondary-color)); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, var(--primary-color), var(--secondary-color));*/
+    /*background: var(--gradient);*/
+    /*background-image: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(126, 232, 250, 0.8));*/
+    /*background-image: linear-gradient(to bottom right, #f876de, #76f8a0);*/
+}
+
+.note-toggle {
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--text-black) !important;
+    padding-left: 0px !important;
+    overflow: hidden;
+    z-index: 1; /* Ensure content stays above */
+}
+
+.note-toggle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.8s ease;
+    z-index: -1; /* Keep the gradient behind the content */
+    transform: scale(1.2); /* Slightly scale it for smoother effect */
+}
+
+.note-toggle:hover::after,
+.note-toggle[aria-expanded="true"]::after {
+    opacity: 1;
+    transform: scale(1); /* Return to original size for a smooth zoom-in effect */
+}
+
+.note-icon {
+    color: var(--text-color);
+}
+
+.note-icon:before {
+    left: 0;
+    top: 0;
+    content: "";
+    color: var(--text-color);
+}
+
+.note-content {
+    padding: 0px;
+    background-color: var(--background-color);
+}
+
+.note-content p, .note-content blockquote, .note-content table, .note-content pre {
+    margin: 13px;
+}
+
+.note-content ol {
+    margin: 13px;
+    padding-inline-start: 37px;
+}
+
+.note-content ul {
+    margin: 13px;
+    padding-inline-start: 20px;
+}
+
+/* Base state for the icon */
+.note-toggle::before {
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: translateY(-50%) rotate(0deg);; /* Initial state */
+}
+
+/* Rotate the icon when aria-expanded is true */
+.note-toggle[aria-expanded="true"]::before {
+    transform: translateY(-50%) rotate(180deg); /* Rotate only the icon */
+}
+
+p, .meta, pre, table, foldable, footer, .list, details {
+    margin-left: 53px;
+}
+
+ul {
+    margin-left: 33px;
+}
+
+ol {
+    margin-left: 51px;
+}
+
+.page-header {
+    margin-left: 50px;
+}
+
+blockquote {
+    margin-left: 37px;
+    padding-left: 0;
+}
+
+blockquote p {
+    margin-left: 13px;
+}
+
+h1::before {
+    font-size: 1.2rem;
+}
+h1 {
+    margin-left: 25px;
+    font-size: 2.5rem;
+    margin-top: 1em;
+}
+
+h2 {
+    margin-left: 14px;
+}
+
+
+.primary-color {
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+@font-face {
+    font-family: 'iA Writer Quattro S';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/ia/iAWriterQuattroS-Regular.woff'), local('woff2'), local('woff');
+    font-display: swap;
+}
+
+code {
+    font-family: var(--code-font);
+    color: var(--text-color);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--text-font);
+    /*background-image: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 44%);*/
+    background-image: var(--gradient);
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    line-height:1.6em
+}
+
+.title {
+    -webkit-text-fill-color: var(--text-0);
+}
+
+.title::before {
+    content: "# ";
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+    position: relative;
+}
+
+article .title::before {
+    display: none;
+}
+
+a {
+    color: var(--text-0);
+}
+
+.meta {
+font-size: 0.75em;
+}
+
+html {
+font-size: 18px;
+}
+
+strong, b {
+    font-family: var(--text-font);
+    background-color: var(--primary-color);
+    /*background-image: linear-gradient(90deg, #009FFF 0%, var(--primary-color) 74%);*/
+    background-image: var(--gradient);
+    color: var(--text-0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+}
+
+em, cite, i, var {
+    font-family: var(--text-font);
+    background-color: var(--primary-color);
+    /*background-image: linear-gradient(90deg, #009FFF 20%, var(--primary-color) 114%);*/
+    background-image: var(--gradient);
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+}
+
+a {
+    position: relative;
+    border-bottom: 1px;
+}
+
+.tags a {
+    border-bottom: 0;
+}
+
+a::before, .tags a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background: var(--primary-color);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 90%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: inherit;
+    min-height: 100%;
+}
+
+.content {
+    flex: 2;
+    width: 90%;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #f3e5f5;
+    padding: 20px;
+}
+
+
+img {
+  border: 0px solid #ececec;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
