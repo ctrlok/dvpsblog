@@ -4,6 +4,9 @@ decription = "Learn how to achieve efficient concurrency in Bash with practical 
 date = "2025-1-5"
 [taxonomies]
 tags = ["bash", "concurrency", "linux", "pipes"]
+[extra]
+comment = true
+hidden = false
 +++
 
 In the days of yore, every interview I ran was a delightful circus of chaos: concurrency, Linux kernel deep dives, gdb/strace (and later eBPF and flamegraphs), and, of course, the classic “so, can you actually use the tools you listed?” quiz, which often includes Bash-related questions. 
@@ -11,7 +14,7 @@ In the days of yore, every interview I ran was a delightful circus of chaos: con
 Ah, simpler times. Anyway, I asked those questions for a reason:
  
 * It never failed to irritate so-called “senior **YAML** architects.” 
-* It separated actual pros from those who just memorized buzzwords.
+* It separated the groovy cats from those who just memorized buzzwords.
 * Admittedly, I was a far more _insufferable_ young man than the refined gentleman I am today.
 
 Also, deep down, I think I tried to form a squad of superhero ninja turtles—only to see them slog through soul-crushing configurational drudgery. 
